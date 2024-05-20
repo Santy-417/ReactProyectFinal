@@ -45,7 +45,6 @@ function NavScrollExample() {
                     </Form>
                 </Navbar.Collapse>
             </Container>
-            <h1></h1>
         </Navbar>
     );
 }
