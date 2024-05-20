@@ -11,7 +11,7 @@ function NavScrollExample() {
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container fluid>
                 <Navbar.Brand >
-                    <img src="/.components\Logo.png" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTQsmq1AolICWasBkeUl1to1AUFKiC_iUc8g&s" height={"50px"}/>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
@@ -45,6 +45,7 @@ function NavScrollExample() {
                     </Form>
                 </Navbar.Collapse>
             </Container>
+            <h1></h1>
         </Navbar>
     );
 }
