@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import PlayerTable from './components/PlayerTable.jsx';
 import NavBarHome from './components/NavBarHome.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';

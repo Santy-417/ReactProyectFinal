@@ -6,7 +6,6 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { useState, useEffect } from 'react';
 import { Navbar, Form, Col, Row } from 'react-bootstrap';
 
-
 function PlayerTable() {
   const [drawPairs, setDrawPairs] = useState(false);
   const [drawOdd, setDrawOdd] = useState(false);
@@ -36,7 +35,7 @@ function PlayerTable() {
     } else {
       setData(copyData.slice(10, 20));
     }
-    setSearchText(''); 
+    setSearchText('');
   };
 
   const handleSearchChange = (event) => {
@@ -55,7 +54,7 @@ function PlayerTable() {
 
   return (
     <>
-      <Container id="container_aux" className='container_class'>
+      <Container id="container_aux" className='container_class' style={{marginTop: "70px"}}>
         <Navbar className="justify-content-left">
           <Form>
             <Row>
@@ -74,7 +73,6 @@ function PlayerTable() {
             </Row>
           </Form>
         </Navbar>
-      </Container>
       <ButtonGroup aria-label="Basic example">
         <Button
           variant="secondary"
@@ -107,14 +105,15 @@ function PlayerTable() {
       <Table
         borderless
         responsive
+        style={{marginTop: "10px"}}
       >
-        <thead className="custom-thead">
-          <tr>
+        <thead className="table_th-color" >
+          <tr >
             <th>#</th>
-            <th style={{ width: '500px', textAlign: 'left' }}>PLAYER</th>
-            <th>POSITION</th>
-            <th>GOALS</th>
-            <th>AGE</th>
+            <th style={{ width: '400px', textAlign: 'left' }}>PLAYER</th>
+            <th >POSITION</th>
+            <th >GOALS</th>
+            <th >AGE</th>
           </tr>
         </thead>
         <tbody style={{ backgroundColor: 'red' }}>
@@ -133,6 +132,7 @@ function PlayerTable() {
           }
         </tbody>
       </Table>
+      </Container>
     </>
   );
 }
