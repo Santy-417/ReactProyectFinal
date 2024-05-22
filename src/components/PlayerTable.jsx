@@ -97,9 +97,16 @@ function PlayerTable() {
         </Button>
         <Button
           variant="secondary"
+          style={{ marginRight: '10px' }}
           onClick={() => onSlice(false)}
         >
           Get 11 to 20
+        </Button>
+        <Button
+          variant="secondary"
+          onClick={() => setData(originalData)}
+        >
+          🔄
         </Button>
       </ButtonGroup>
       <Table

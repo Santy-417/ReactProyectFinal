@@ -1,7 +1,8 @@
 import PlayerTable from './components/PlayerTable.jsx';
 import NavBarHome from './components/NavBarHome.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from './components/Footer.jsx';
+import SocialMedial from './components/SocialMedial.jsx';
+
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
     <>
       <NavBarHome />
       <PlayerTable />
-      <Footer />
+      <SocialMedial/>
     </>
   )
 }
