@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Container, Nav, NavDropdown, Form, Button } from 'react-bootstrap';
 
-const MyNavBar = () => {
+const NavBarHome = () => {
     return (
         <>
             <Navbar expand="lg" style={{ backgroundColor: '#12171f' }} >
@@ -51,4 +51,4 @@ const MyNavBar = () => {
     );
 }
 
-export default MyNavBar;
+export default NavBarHome;
