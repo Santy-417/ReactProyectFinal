@@ -54,7 +54,7 @@ function PlayerTable() {
 
   return (
     <>
-      <Container id="container_aux" className='container_class' style={{marginTop: "70px"}}>
+      <Container id="container_aux" className='container_class' style={{ marginTop: "70px" }}>
         <Navbar className="justify-content-left">
           <Form>
             <Row>
@@ -73,72 +73,72 @@ function PlayerTable() {
             </Row>
           </Form>
         </Navbar>
-      <ButtonGroup aria-label="Basic example">
-        <Button
-          variant="secondary"
-          style={{ marginRight: '10px' }}
-          onClick={onDrawPairs}
+        <ButtonGroup aria-label="Basic example">
+          <Button
+            variant="secondary"
+            style={{ marginRight: '10px' }}
+            onClick={onDrawPairs}
+          >
+            Draw pairs
+          </Button>
+          <Button
+            variant="secondary"
+            style={{ marginRight: '10px' }}
+            onClick={onDrawOdd}
+          >
+            Draw odd
+          </Button>
+          <Button
+            variant="secondary"
+            style={{ marginRight: '10px' }}
+            onClick={() => onSlice(true)}
+          >
+            Get 1 to 10
+          </Button>
+          <Button
+            variant="secondary"
+            style={{ marginRight: '10px' }}
+            onClick={() => onSlice(false)}
+          >
+            Get 11 to 20
+          </Button>
+          <Button
+            variant="secondary"
+            onClick={() => setData(originalData)}
+          >
+            🔄
+          </Button>
+        </ButtonGroup>
+        <Table
+          borderless
+          responsive
+          style={{ marginTop: "10px" }}
         >
-          Draw pairs
-        </Button>
-        <Button
-          variant="secondary"
-          style={{ marginRight: '10px' }}
-          onClick={onDrawOdd}
-        >
-          Draw odd
-        </Button>
-        <Button
-          variant="secondary"
-          style={{ marginRight: '10px' }}
-          onClick={() => onSlice(true)}
-        >
-          Get 1 to 10
-        </Button>
-        <Button
-          variant="secondary"
-          style={{ marginRight: '10px' }}
-          onClick={() => onSlice(false)}
-        >
-          Get 11 to 20
-        </Button>
-        <Button
-          variant="secondary"
-          onClick={() => setData(originalData)}
-        >
-          🔄
-        </Button>
-      </ButtonGroup>
-      <Table
-        borderless
-        responsive
-        style={{marginTop: "10px"}}
-      >
-        <thead className="table_th-color" >
-          <tr >
-            <th>#</th>
-            <th style={{ width: '400px', textAlign: 'left' }}>PLAYER</th>
-            <th >POSITION</th>
-            <th >GOALS</th>
-            <th >AGE</th>
-          </tr>
-        </thead>
-        <tbody style={{ backgroundColor: 'red' }}>
-          {data && data.length > 0 ?
-            data.map((player, index) => (
-              <tr key={index} className={drawPairs && index % 2 === 0 ? "table-primary" :
-                drawOdd && index % 2 === 1 ? "table-success" : null}>
-                <td>{player.number}</td>
-                <td style={{ textAlign: 'left' }}>{player.name}</td>
-                <td>{player.position}</td>
-                <td>{player.goals}</td>
-                <td>{player.age}</td>
-              </tr>
-            ))
-            : <tr><td colSpan="5">No data</td></tr>
-          }
-        </tbody>
-      </Table>
+          <thead className="table_th-color" >
+            <tr >
+              <th>#</th>
+              <th style={{ width: '400px', textAlign: 'left' }}>PLAYER</th>
+              <th >POSITION</th>
+              <th >GOALS</th>
+              <th >AGE</th>
+            </tr>
+          </thead>
+          <tbody style={{ backgroundColor: 'red' }}>
+            {data && data.length > 0 ?
+              data.map((player, index) => (
+                <tr key={index} className={drawPairs && index % 2 === 0 ? "table-primary" :
+                  drawOdd && index % 2 === 1 ? "table-success" : null}>
+                  <td>{player.number}</td>
+                  <td style={{ textAlign: 'left' }}>{player.name}</td>
+                  <td>{player.position}</td>
+                  <td>{player.goals}</td>
+                  <td>{player.age}</td>
+                </tr>
+              ))
+              : <tr><td colSpan="5">No data</td></tr>
+            }
+          </tbody>
+        </Table>
       </Container>
     </>
   );

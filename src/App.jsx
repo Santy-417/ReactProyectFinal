@@ -11,7 +11,7 @@ function App() {
     <>
       <NavBarHome />
       <PlayerTable />
-      <SocialMedial/>
+      <SocialMedial />
     </>
   )
 }
